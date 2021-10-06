@@ -1,0 +1,51 @@
+body {
+    padding-top: 70px;
+}
+
+.card {
+    margin: auto;
+    width: 18rem;
+}
+
+.after-test {
+    position: relative;
+    top: 10px;
+    margin-left: 100px;
+    background-color: green;
+    height: 100px;
+    width: 100px;
+    opacity: 1;
+}
+
+.after-test::before {
+    display: block;
+    position: absolute;
+    content: 'before';
+    top: -20px;
+    left: -20px;
+    height: 100%;
+    width: 100%;
+    background-color: blue;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+.after-test::after {
+    display: block;
+    position: absolute;
+    content: 'after';
+    top: 20px;
+    left: 20px;
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    opacity: 0.6;
+}
+
+.row > .col:first-child > p {
+    color: blue;
+}
+
+.row > .col:nth-child(3) > p {
+    color: red;
+}
