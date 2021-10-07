@@ -1,30 +1,36 @@
 const labels = [
-    'Русский язык',
-    'Литература',
-    'Алгебра',
-    'Геометрия',
+    'Уголь',
+    'Древесина',
+    'Нефть',
+    'Газ',
 ];
 
 const data = {
     labels: labels,
     datasets: [
         {
-            label: 'Иванов',
+            label: 'Добыча (т.)',
             backgroundColor: 'rgb(0, 0, 255)',
             borderColor: 'rgb(0, 0, 255)',
-            data: [4.8, 4.1, 4.7, 4.2],
+            data: [500, 700, 420, 480],
         },
         {
-            label: 'Петров',
+            label: 'Обработка (т.)',
             backgroundColor: 'rgb(120, 219, 226)',
-            borderColor: 'rgb(255, 99, 132)',
-            data: [4.2, 4.3, 3.8, 3.2],
+            borderColor: 'rgb(120, 219, 226)',
+            data: [400, 330, 250, 390],
         },
         {
-            label: 'Сидоров',
+            label: 'Экспорт (т.)',
             backgroundColor: 'rgb(255, 99, 132)',
             borderColor: 'rgb(255, 99, 132)',
-            data: [5, 5, 4.9, 5],
+            data: [200, 230, 140, 190],
+        },
+        {
+            label: 'Импорт (т.)',
+            backgroundColor: 'rgb(146,20,144)',
+            borderColor: 'rgb(146,20,144)',
+            data: [80, 90, 70, 40],
         }
     ]
 };
