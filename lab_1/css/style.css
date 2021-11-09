@@ -131,3 +131,7 @@ p {
 .row > .col:nth-child(3) > p {
     color: red;
 }
+
+.hide {
+    display: none;
+}
