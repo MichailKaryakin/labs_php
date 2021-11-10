@@ -18,7 +18,7 @@ body {
 }
 
 p {
-    text-indent: 20px; /* Отступ первой строки в пикселах */
+    text-indent: 10px; /* Отступ первой строки в пикселах */
 }
 
 .wrap {
@@ -26,6 +26,30 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.photo {
+    position: relative;
+    display: inline-block;
+}
+
+.photo img {
+    border: 4px solid #b7ff00;
+}
+
+.photo span {
+    background: #222;
+    color: #fff;
+    border-radius: 2px;
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    font-size: 30px;
+    padding: 3px 5px;
+}
+
+tbody tr:hover {
+    background: #f3bd48;
 }
 
 .block {
@@ -123,15 +147,6 @@ p {
     grid-row-start: 3;
 }
 
-
-.row > .col:first-child > p {
+.col:first-child {
     color: blue;
-}
-
-.row > .col:nth-child(3) > p {
-    color: red;
-}
-
-.hide {
-    display: none;
 }

@@ -8,6 +8,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
             integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
             crossorigin="anonymous"></script>
+    <script src="../content/jquery/jquery-1.9.1.min.js"></script>
+    <script src="../content/jquery/jquery-ui.min.js"></script>
     <link href="../css/style.css" rel="stylesheet">
     <title>Практическая работа №1</title>
 </head>
@@ -37,48 +39,47 @@
 </nav>
 
 <div class="row">
+
     <div class="col">
-        <div class="card js-card" draggable="true">
+        <div class="card">
             <img src="../content/bill.jpg" class="card-img-top" alt="CardLogo">
             <div class="card-body">
                 <h5 class="card-title">Билл Эванс</h5>
                 <p class="card-text">Джазовый пианист</p>
             </div>
         </div>
-
     </div>
 
-    <div class="col js-cell">
-        <div class="card js-card" draggable="true">
+    <div class="col">
+        <div class="card">
             <img src="../content/jimmy.jpg" class="card-img-top" alt="CardLogo">
             <div class="card-body">
                 <h5 class="card-title">Джимми Пейдж</h5>
                 <p class="card-text">Гитарист Led Zeppelin</p>
             </div>
         </div>
-
     </div>
 
-    <div class="col js-cell">
-        <div class="card js-card" draggable="true">
+    <div class="col">
+        <div class="card">
             <img src="../content/keith.jpg" class="card-img-top" alt="CardLogo">
             <div class="card-body">
                 <h5 class="card-title">Кит Джаррет</h5>
                 <p class="card-text">Пианист-импровизатор</p>
             </div>
         </div>
-
     </div>
-    <div class="col js-cell">
-        <div class="card js-card" draggable="true">
+
+    <div class="col">
+        <div class="card">
             <img src="../content/bob.jpg" class="card-img-top" alt="CardLogo">
             <div class="card-body">
                 <h5 class="card-title">Боб Дилан</h5>
                 <p class="card-text">Поэт, автор песен</p>
             </div>
         </div>
-
     </div>
+
 </div>
 
 <div class="container">
@@ -92,7 +93,9 @@
     </footer>
 </div>
 
-<script src="../js/dragAndDrop.js"></script>
+<script>
+    $('.row').sortable();
+</script>
 
 </body>
 
