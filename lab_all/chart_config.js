@@ -51,3 +51,18 @@ let myChart = new Chart(
     document.getElementById('myChart'),
     config
 );
+
+function changeColor()
+{
+    let sel = document.getElementById("select");
+    let colors =
+        [
+            "rgb(144, 144, 158)",
+            "rgb(46, 72, 112)",
+            "rgb(90, 30, 64)",
+            "rgb(79, 86, 52)"
+        ];
+
+    data.datasets[0].backgroundColor = colors[sel.value];
+    myChart.update();
+}

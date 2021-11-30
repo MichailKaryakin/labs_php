@@ -56,7 +56,6 @@ if (isset($_POST['bio'])) {
 if (isset($_FILES['file'])) {
     $l = $_FILES['file']['tmp_name'];
     $photo_path = "data_files/user_" . $a . ".jpg";
-    move_uploaded_file($_FILES['file']['tmp_name'], $photo_path);
 }
 
 fflush($handler);
@@ -104,11 +103,16 @@ fflush($handler);
     </div>
 </nav>
 
-<div>
-    Ссылка на файл:
+<div class="finalBox">
     <span>
         <?php
-            echo '<a href="http://'.$_SERVER['HTTP_HOST'].'/data_files/'.$file_path.'>';
+            if (move_uploaded_file($_FILES['file']['tmp_name'], $photo_path)) {
+                echo "<a href=\"$photo_path\">Картинка</a><br>";
+            }
+            else {
+                echo "File not selected\n";
+            }
+            echo "<a href=\"$file_path\">Файл</a>";
         ?>
     </span>
 </div>
