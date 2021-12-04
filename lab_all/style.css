@@ -28,37 +28,12 @@ p {
     justify-content: center;
 }
 
-.photo {
-    position: relative;
-    display: inline-block;
-}
-
-.photo img {
-    border: 4px solid rgba(88, 125, 246, 0.84);
-}
-
-.photo span {
-    background: #222;
-    color: #fff;
-    border-radius: 2px;
-    position: absolute;
-    right: 0;
-    bottom: 10px;
-    font-size: 30px;
-    padding: 3px 5px;
-}
-
 tbody tr:hover {
     background: #f3bd48;
 }
 
 .block {
     width: 45%;
-}
-
-.photo img {
-    width: 100%;
-    height: 100%;
 }
 
 #lightbox {
@@ -198,8 +173,32 @@ input[type="checkbox"] + label, input[type="radio"] + label {
         display: block;
     }
 }
+
 @media (max-width: 767px) {
     .container {
         max-width: none;
     }
+}
+
+.thumb {
+    width: 20%;
+    height: 20%;
+}
+
+img {
+    border: 2px solid rgba(88, 125, 246, 0.84);
+}
+
+.img-container {
+    position: relative;
+}
+
+.img-container::after{
+    position: absolute;
+    bottom: 30px;
+    left: 25%;
+    width: 50%;
+    text-align: center;
+    content: attr(img-title);
+    background-color: white;
 }

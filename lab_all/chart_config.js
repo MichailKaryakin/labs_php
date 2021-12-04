@@ -63,6 +63,7 @@ function changeColor()
             "rgb(79, 86, 52)"
         ];
 
-    data.datasets[0].backgroundColor = colors[sel.value];
+    data.datasets[3].backgroundColor = colors[sel.value];
+    data.datasets[0].borderColor = colors[sel.value];
     myChart.update();
 }

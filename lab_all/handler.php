@@ -1,61 +1,67 @@
 <?php
 
-$a = $_POST['name'];
-$b = $_POST['email'];
-$c = $_POST['age'];
-$d = $_POST['date'];
-$e = $_POST['password'];
+$name = $_POST['name'];
+$email = $_POST['email'];
+$age = $_POST['age'];
+$date = $_POST['date'];
+$password = $_POST['password'];
 
-$file_path = "data_files/user_" . $a . "_data.txt";
+$photo_path = "data_files/user_" . $name . ".jpeg";
+$file_path = "data_files/user_" . $name . "_data.txt";
 $handler = fopen($file_path, "w+");
+fprintf($handler, chr(0xEF).chr(0xBB).chr(0xBF));
 
-fwrite($handler, $a);
+fwrite($handler, $name);
 fwrite($handler, "\n");
-fwrite($handler, $b);
+fwrite($handler, $email);
 fwrite($handler, "\n");
-fwrite($handler, $c);
+fwrite($handler, $age);
 fwrite($handler, "\n");
-fwrite($handler, $d);
+fwrite($handler, $date);
 fwrite($handler, "\n");
-fwrite($handler, $e);
+fwrite($handler, $password);
 fwrite($handler, "\n");
 
+if (isset($_POST['character'])) {
+    $character = $_POST['character'];
+    fwrite($handler, $character);
+    fwrite($handler, "\n");
+}
 if (isset($_POST['banana'])) {
-    $f = $_POST['banana'];
+    $banana = $_POST['banana'];
     fwrite($handler, "banana ");
-    fwrite($handler, $f);
+    fwrite($handler, $banana);
     fwrite($handler, "\n");
 }
 if (isset($_POST['apple'])) {
-    $g = $_POST['apple'];
+    $apple = $_POST['apple'];
     fwrite($handler, "apple ");
-    fwrite($handler, $g);
+    fwrite($handler, $apple);
     fwrite($handler, "\n");
 }
 if (isset($_POST['pear'])) {
-    $h = $_POST['pear'];
+    $pear = $_POST['pear'];
     fwrite($handler, "pear ");
-    fwrite($handler, $h);
+    fwrite($handler, $pear);
     fwrite($handler, "\n");
 }
 if (isset($_POST['gender'])) {
-    $i = $_POST['gender'];
-    fwrite($handler, $i);
+    $gender = $_POST['gender'];
+    fwrite($handler, $gender);
     fwrite($handler, "\n");
 }
 if (isset($_POST['favoriteArtist'])) {
-    $j = $_POST['favoriteArtist'];
-    fwrite($handler, $j);
+    $favoriteArtist = $_POST['favoriteArtist'];
+    fwrite($handler, $favoriteArtist);
     fwrite($handler, "\n");
 }
 if (isset($_POST['bio'])) {
-    $k = $_POST['bio'];
-    fwrite($handler, $k);
+    $bio = $_POST['bio'];
+    fwrite($handler, $bio);
     fwrite($handler, "\n");
 }
 if (isset($_FILES['file'])) {
-    $l = $_FILES['file']['tmp_name'];
-    $photo_path = "data_files/user_" . $a . ".jpg";
+    $file = $_FILES['file']['tmp_name'];
 }
 
 fflush($handler);
@@ -107,7 +113,7 @@ fflush($handler);
     <span>
         <?php
             if (move_uploaded_file($_FILES['file']['tmp_name'], $photo_path)) {
-                echo "<a href=\"$photo_path\">Картинка</a><br>";
+                echo "<img class='thumb' src='$photo_path', alt='$photo_path'/><br>";
             }
             else {
                 echo "File not selected\n";
