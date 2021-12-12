@@ -9,7 +9,7 @@
             integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
             crossorigin="anonymous"></script>
     <link href="style.css" rel="stylesheet">
-    <title>Практическая работа №2</title>
+    <title>Практическая работа №3</title>
 </head>
 
 <body>
@@ -34,6 +34,9 @@
                 <li class="nav-item">
                     <a class="nav-link active" href="form.html" aria-disabled="true">Анкета</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="api.html" aria-disabled="true">Внешнее API</a>
+                </li>
             </ul>
         </div>
     </div>
@@ -41,82 +44,86 @@
 
 <form action="handler.php" method = "POST" enctype="multipart/form-data">
     <fieldset>
-        <div class = "firstBox">
-            <label for="name">Имя</label>
-            <input pattern="[^0-9]*" type="text" name="name" id="name" required>
-        </div>
-        <div>
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" required>
-        </div>
-        <div>
-            <label for="age">Возраст</label>
-            <input type="number" name="age" id="age" min="1" max="200" step="1" required>
-        </div>
-        <div>
-            <label for="date">Дата регистрации</label>
-            <input type="date" name="date" id="date" min="2019-06-10" required>
-        </div>
-        <div>
-            <label for="password">Пароль</label>
-            <input pattern="[\x1F-\xBF]*" type="password" name="password" id="password" required minlength="7">
-        </div>
-        <div>
-            <label for="character">Любимый персонаж</label>
-            <input list="character" name="character" />
-            <datalist id="character">
-                <option value="Джозеф"></option>
-                <option value="Джонни"></option>
-            </datalist>
-        </div>
-        <div>
-            <div class="checks">
-                <label>Что нравится?</label>
-                <input type="checkbox" name="banana" id="banana">
-                <label for="banana">Банан</label>
-                <input type="checkbox" name="apple" id="apple">
-                <label for="apple">Яблоко</label>
-                <input type="checkbox" name="pear" id="pear">
-                <label for="pear">Груша</label>
+        <div class="left">
+            <div class = "firstBox">
+                <label for="name">Имя</label>
+                <input pattern="[^0-9]*" type="text" name="name" id="name" required>
             </div>
-            <div class="checks">
-                <label>Гендер</label>
-                <input type="radio" name="gender" id="male" value="male">
-                <label for="male">Мужчина</label>
-                <input type="radio" name="gender" id="female" value="female">
-                <label for="female">Женщина</label>
-                <input type="radio" name="gender" id="helicopter" value="helicopter">
-                <label for="helicopter">Вертолёт</label>
-            </div>
-        </div>
-        <div>
-            <label for="favoriteArtist">Любимый исполнитель</label>
             <div>
-                <select name="favoriteArtist" id="favoriteArtist" multiple>
-                    <option value="Led Zeppelin">Led Zeppelin</option>
-                    <option value="The Beatles">The Beatles</option>
-                    <option value="Cream">Cream</option>
-                    <option value="The Doors">The Doors</option>
-                    <option value="Beach Boys">Beach Boys</option>
-                    <option value="Miles Davies">Miles Davies</option>
-                    <option value="John Coltrane">John Coltrane</option>
-                </select>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
             </div>
-        </div>
-        <div>
-            <label for="bio">О себе</label>
             <div>
-                <textarea id="bio" name="bio"></textarea>
+                <label for="age">Возраст</label>
+                <input type="number" name="age" id="age" min="1" max="200" step="1" required>
+            </div>
+            <div>
+                <label for="date">Дата регистрации</label>
+                <input type="date" name="date" id="date" min="2019-06-10" required>
+            </div>
+            <div>
+                <label for="password">Пароль</label>
+                <input pattern="[\x1F-\xBF]*" type="password" name="password" id="password" required minlength="7">
+            </div>
+            <div>
+                <label for="character">Любимый персонаж</label>
+                <input list="character" name="character" />
+                <datalist id="character">
+                    <option value="Джозеф"></option>
+                    <option value="Джонни"></option>
+                </datalist>
             </div>
         </div>
-        <div>
-            <label for="file">Аватар</label>
-            <input id="file" type="file" name="file">
-        </div>
-        <div>
-            <label>Действия</label>
-            <button type="reset">Сбросить</button>
-            <button type="submit">Отправить</button>
+        <div class="right">
+            <div>
+                <div class="checks firstBox">
+                    <label>Что нравится?</label>
+                    <input type="checkbox" name="banana" id="banana">
+                    <label for="banana">Банан</label>
+                    <input type="checkbox" name="apple" id="apple">
+                    <label for="apple">Яблоко</label>
+                    <input type="checkbox" name="pear" id="pear">
+                    <label for="pear">Груша</label>
+                </div>
+                <div class="checks">
+                    <label>Гендер</label>
+                    <input type="radio" name="gender" id="male" value="male">
+                    <label for="male">Мужчина</label>
+                    <input type="radio" name="gender" id="female" value="female">
+                    <label for="female">Женщина</label>
+                    <input type="radio" name="gender" id="helicopter" value="helicopter">
+                    <label for="helicopter">Вертолёт</label>
+                </div>
+            </div>
+            <div>
+                <label for="favoriteArtist">Любимый исполнитель</label>
+                <div>
+                    <select name="favoriteArtist" id="favoriteArtist" multiple>
+                        <option value="Led Zeppelin">Led Zeppelin</option>
+                        <option value="The Beatles">The Beatles</option>
+                        <option value="Cream">Cream</option>
+                        <option value="The Doors">The Doors</option>
+                        <option value="Beach Boys">Beach Boys</option>
+                        <option value="Miles Davies">Miles Davies</option>
+                        <option value="John Coltrane">John Coltrane</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <label for="bio">О себе</label>
+                <div>
+                    <textarea id="bio" name="bio"></textarea>
+                </div>
+            </div>
+            <div>
+                <label for="file">Аватар</label>
+                <input id="file" type="file" name="file">
+            </div>
+            <div>
+                <label>Действия</label>
+                <button type="reset">Сбросить</button>
+                <button type="submit">Отправить</button>
+            </div>
         </div>
     </fieldset>
 </form>
@@ -128,6 +135,7 @@
             <li class="nav-item"><a href="table_and_graf.html" class="nav-link px-2 text-muted">График</a></li>
             <li class="nav-item"><a href="notes.html" class="nav-link px-2 text-muted">Заметки</a></li>
             <li class="nav-item"><a href="form.html" class="nav-link px-2 text-muted">Анкета</a></li>
+            <li class="nav-item"><a href="api.html" class="nav-link px-2 text-muted">Внешнее API</a></li>
         </ul>
         <p class="text-center text-muted"><a id="footer"></a>© 2021 Company, Inc</p>
     </footer>

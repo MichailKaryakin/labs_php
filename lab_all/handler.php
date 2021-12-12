@@ -79,7 +79,7 @@ fflush($handler);
             integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
             crossorigin="anonymous"></script>
     <link href="style.css" rel="stylesheet">
-    <title>Практическая работа №2</title>
+    <title>Практическая работа №3</title>
 </head>
 
 <body>
@@ -103,6 +103,9 @@ fflush($handler);
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="form.html" aria-disabled="true">Анкета</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="api.html" aria-disabled="true">Внешнее API</a>
                 </li>
             </ul>
         </div>
@@ -130,6 +133,7 @@ fflush($handler);
             <li class="nav-item"><a href="table_and_graf.html" class="nav-link px-2 text-muted">График</a></li>
             <li class="nav-item"><a href="notes.html" class="nav-link px-2 text-muted">Заметки</a></li>
             <li class="nav-item"><a href="form.html" class="nav-link px-2 text-muted">Анкета</a></li>
+            <li class="nav-item"><a href="api.html" class="nav-link px-2 text-muted">Внешнее API</a></li>
         </ul>
         <p class="text-center text-muted"><a id="footer"></a>© 2021 Company, Inc</p>
     </footer>

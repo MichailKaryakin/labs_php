@@ -202,3 +202,30 @@ img {
     content: attr(img-title);
     background-color: white;
 }
+
+.left {
+    float: left;
+}
+
+.right {
+    margin-left: 250px;
+    overflow: hidden;
+}
+
+.veryRight {
+    float: right;
+    width: 200px;
+    padding: 10px;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type="number"],
+input[type="number"]:hover,
+input[type="number"]:focus {
+    appearance: none;
+    -moz-appearance: textfield;
+}
