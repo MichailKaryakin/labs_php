@@ -20,9 +20,6 @@ function initSecidSelect() {
         data: {},
         success: function (data) {
             let optionArray = [];
-            while (secid.firstChild) {
-                secid.removeChild(secid.firstChild);
-            }
             let arr = data.data;
             arr.forEach(function (item) {
                 optionArray.push(createOptionElem(item.title, item.secid));
@@ -43,9 +40,6 @@ function initIntervalSelect() {
         data: {},
         success: function (data) {
             let optionArray = [];
-            while (interval.firstChild) {
-                interval.removeChild(interval.firstChild);
-            }
             let arr = data.data;
             arr.forEach(function (item) {
                 optionArray.push(createOptionElem(item.title, item.value));
@@ -88,8 +82,8 @@ function getData(event) {
     let interval_index = document.getElementById('interval_select').options.selectedIndex;
     let secid_value = document.getElementById('secid_select').options[secid_index].value;
     let interval_value = document.getElementById('interval_select').options[interval_index].value;
-    let limits = document.getElementById('limit_value');
-    let date = document.getElementById('date_value');
+    let limits_value = document.getElementById('limit_value').value;
+    let date_value = document.getElementById('date_value').value;
     $.ajax({
         url: "https://sedelkin.ru/api/history/get_data",
         method: "post",
@@ -97,9 +91,9 @@ function getData(event) {
         data: {
             app_key: "lpDRhW4f%5Bj|i8mB~BjlCD#Ve6wAi",
             interval: interval_value,
-            limits: limits.value,
+            limits: limits_value,
             secid: secid_value,
-            start: date.value,
+            start: date_value,
             finish: ""
         },
         success: function (data) {
