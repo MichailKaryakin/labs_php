@@ -1,5 +1,6 @@
 body {
     padding-top: 70px;
+    background-color: #EDEEF0;
 }
 
 .card {
@@ -126,14 +127,6 @@ tbody tr:hover {
     color: blue;
 }
 
-fieldset {
-    margin: 2em 0;
-    padding: 1em 2em;
-    border: solid 1px black;
-    border-radius: 6px;
-    min-width: 200px;
-}
-
 @media (max-width: 1200px) {
     .container {
         display: block;
@@ -150,11 +143,6 @@ fieldset {
     .container {
         max-width: none;
     }
-}
-
-.thumb {
-    width: 20%;
-    height: 20%;
 }
 
 img {
