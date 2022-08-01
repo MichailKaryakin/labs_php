@@ -1,0 +1,13 @@
+body {
+    padding-top: 70px;
+    background-color: #EDEEF0;
+}
+
+.card {
+    margin: auto;
+    width: 18rem;
+}
+
+.col:first-child {
+    color: blue;
+}

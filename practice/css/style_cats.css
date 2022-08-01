@@ -30,10 +30,6 @@ body {
     box-shadow: 5px 5px 15px grey;
 }
 
-.btn {
-    padding: 8px;
-}
-
 p {
     text-indent: 10px; /* Отступ первой строки в пикселах */
 }
