@@ -16,7 +16,6 @@ body {
     font-size: 1.05rem;
     line-height: 1.6;
     font-family: 'Poppins', sans-serif;
-    background-color: #EDEEF0;
 }
 
 /*  */
@@ -198,7 +197,6 @@ body {
     -o-border-radius: 2rem;
 }
 
-
 /* js related */
 .showRecipe {
     display: block;
@@ -298,7 +296,6 @@ body {
     opacity: 0.8;
 }
 
-
 /*  */
 .notFound {
     grid-template-columns: 1fr !important;
@@ -307,7 +304,6 @@ body {
     font-weight: 600;
     width: 100%;
 }
-
 
 /* Media Queries */
 @media screen and (min-width: 600px) {
@@ -338,4 +334,28 @@ body {
     #meal {
         grid-template-columns: repeat(3, 1fr);
     }
+}
+
+ ul {
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+     overflow: hidden;
+     background-color: #333;
+ }
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
 }
