@@ -47,22 +47,23 @@
 
 <div class="container mx-auto">
     <div class="row">
-        <div class="col-md-7" style ="margin-top: 25px;">
+        <div class="col-md-7" style="margin-top: 25px;">
             <canvas id="myChart"></canvas>
         </div>
-        <div class="col-md-5" style ="margin-top: 25px;">
+        <div class="col-md-5" style="margin-top: 25px;">
             <form action="/#" method="post" onsubmit="getData(event)">
                 <div class="col-11">
                     <label for="secid_select" class="form-label">Наименование компании</label>
-                    <select id ="secid_select" class="form-select form-select-lg nb-3"></select>
+                    <select id="secid_select" class="form-select form-select-lg nb-3"></select>
                 </div>
                 <div class="col-11">
                     <label for="interval_select" class="form-label">Интервал графика</label>
-                    <select id ="interval_select" class="form-select form-select-lg nb-3"></select>
+                    <select id="interval_select" class="form-select form-select-lg nb-3"></select>
                 </div>
                 <div class="col-11">
                     <label for="limit_value" class="form-label">Количество записей в ответе</label>
-                    <input id="limit_value" type="number" class="form-control form-control-lg" value="1700" required max="1700" min="1">
+                    <input id="limit_value" type="number" class="form-control form-control-lg" value="1700" required
+                           max="1700" min="1">
                 </div>
                 <div class="col-11">
                     <label for="date_value" class="form-label">Дата начала</label>

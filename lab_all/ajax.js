@@ -115,7 +115,7 @@ initSecidSelect();
 
 initIntervalSelect();
 
-let myChart = new Chart (
+let myChart = new Chart(
     document.getElementById('myChart'),
     config
 )

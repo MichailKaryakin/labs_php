@@ -52,8 +52,7 @@ let myChart = new Chart(
     config
 );
 
-function changeColor()
-{
+function changeColor() {
     let sel = document.getElementById("select");
     let colors =
         [

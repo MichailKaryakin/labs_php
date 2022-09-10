@@ -193,7 +193,7 @@ img {
     position: relative;
 }
 
-.img-container::after{
+.img-container::after {
     position: absolute;
     bottom: 30px;
     left: 25%;

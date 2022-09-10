@@ -9,7 +9,7 @@ $password = $_POST['password'];
 $photo_path = "data_files/user_" . $name . ".jpeg";
 $file_path = "data_files/user_" . $name . "_data.txt";
 $handler = fopen($file_path, "w+");
-fprintf($handler, chr(0xEF).chr(0xBB).chr(0xBF));
+fprintf($handler, chr(0xEF) . chr(0xBB) . chr(0xBF));
 
 fwrite($handler, $name);
 fwrite($handler, "\n");
@@ -115,13 +115,12 @@ fflush($handler);
 <div class="finalBox">
     <span>
         <?php
-            if (move_uploaded_file($_FILES['file']['tmp_name'], $photo_path)) {
-                echo "<img class='thumb' src='$photo_path', alt='$photo_path'/><br>";
-            }
-            else {
-                echo "File not selected\n";
-            }
-            echo "<a href=\"$file_path\">Файл</a>";
+        if (move_uploaded_file($_FILES['file']['tmp_name'], $photo_path)) {
+            echo "<img class='thumb' src='$photo_path', alt='$photo_path'/><br>";
+        } else {
+            echo "File not selected\n";
+        }
+        echo "<a href=\"$file_path\">Файл</a>";
         ?>
     </span>
 </div>
