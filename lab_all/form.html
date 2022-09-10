@@ -8,7 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
             integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
             crossorigin="anonymous"></script>
-    <link href="style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <title>Практическая работа №3</title>
 </head>
 
@@ -42,10 +42,10 @@
     </div>
 </nav>
 
-<form action="handler.php" method="POST" enctype="multipart/form-data">
+<form action="php/handler.php" method = "POST" enctype="multipart/form-data">
     <fieldset>
         <div class="left">
-            <div class="firstBox">
+            <div class = "firstBox">
                 <label for="name">Имя</label>
                 <input pattern="[^0-9]*" type="text" name="name" id="name" required>
             </div>
@@ -67,7 +67,7 @@
             </div>
             <div>
                 <label for="character">Любимый персонаж</label>
-                <input list="character" name="character"/>
+                <input list="character" name="character" />
                 <datalist id="character">
                     <option value="Джозеф"></option>
                     <option value="Джонни"></option>

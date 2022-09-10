@@ -1,0 +1,84 @@
+body {
+    padding-top: 70px;
+    background-color: #EDEEF0;
+}
+
+p {
+    text-indent: 10px; /* Отступ первой строки в пикселах */
+}
+
+.navigation {
+    margin-bottom: 40px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.container {
+    display: grid;
+    gap: 20px;
+}
+
+.box-1 {
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
+
+.box-2 {
+    grid-column-start: 2;
+    grid-row-start: 1;
+}
+
+.box-3 {
+    grid-column-start: 3;
+    grid-row-start: 1;
+}
+
+.box-4 {
+    grid-column-start: 1;
+    grid-row-start: 2;
+}
+
+.box-5 {
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+
+.box-6 {
+    grid-column-start: 3;
+    grid-row-start: 2;
+}
+
+.box-7 {
+    grid-column-start: 1;
+    grid-row-start: 3;
+}
+
+.box-8 {
+    grid-column-start: 2;
+    grid-row-start: 3;
+}
+
+.box-9 {
+    grid-column-start: 3;
+    grid-row-start: 3;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        display: block;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        display: block;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        max-width: none;
+    }
+}

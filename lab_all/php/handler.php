@@ -78,7 +78,7 @@ fflush($handler);
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
             integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
             crossorigin="anonymous"></script>
-    <link href="style.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
     <title>Практическая работа №3</title>
 </head>
 
@@ -93,19 +93,19 @@ fflush($handler);
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="index.html">Статья</a>
+                    <a class="nav-link" aria-current="page" href="../index.html">Статья</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="table_and_graf.html">График</a>
+                    <a class="nav-link" aria-current="page" href="../table_and_graf.html">График</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="notes.html" aria-disabled="true">Заметки</a>
+                    <a class="nav-link" href="../notes.html" aria-disabled="true">Заметки</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="form.html" aria-disabled="true">Анкета</a>
+                    <a class="nav-link" href="../form.html" aria-disabled="true">Анкета</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="api.html" aria-disabled="true">Внешнее API</a>
+                    <a class="nav-link" href="../api.html" aria-disabled="true">Внешнее API</a>
                 </li>
             </ul>
         </div>
@@ -128,11 +128,11 @@ fflush($handler);
 <div class="container">
     <footer class="py-3 my-4">
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            <li class="nav-item"><a href="index.html" class="nav-link px-2 text-muted">Статья</a></li>
-            <li class="nav-item"><a href="table_and_graf.html" class="nav-link px-2 text-muted">График</a></li>
-            <li class="nav-item"><a href="notes.html" class="nav-link px-2 text-muted">Заметки</a></li>
-            <li class="nav-item"><a href="form.html" class="nav-link px-2 text-muted">Анкета</a></li>
-            <li class="nav-item"><a href="api.html" class="nav-link px-2 text-muted">Внешнее API</a></li>
+            <li class="nav-item"><a href="../index.html" class="nav-link px-2 text-muted">Статья</a></li>
+            <li class="nav-item"><a href="../table_and_graf.html" class="nav-link px-2 text-muted">График</a></li>
+            <li class="nav-item"><a href="../notes.html" class="nav-link px-2 text-muted">Заметки</a></li>
+            <li class="nav-item"><a href="../form.html" class="nav-link px-2 text-muted">Анкета</a></li>
+            <li class="nav-item"><a href="../api.html" class="nav-link px-2 text-muted">Внешнее API</a></li>
         </ul>
         <p class="text-center text-muted"><a id="footer"></a>© 2021 Company, Inc</p>
     </footer>

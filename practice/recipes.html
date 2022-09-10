@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Практика</title>
+    <link rel="stylesheet" href="css/style_recipes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+          integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+          crossorigin="anonymous"/>
+</head>
+
+<body>
+
+<ul>
+    <li><a href="article.html">Назад</a></li>
+</ul>
+
+<div class="container">
+    <div class="meal-wrapper">
+        <div class="meal-search">
+            <h2 class="title">Рецепты по ингредиентам</h2>
+            <blockquote>Api использует английский язык, поэтому ингредиенты следует вводить на английском языке.
+                Например: pork, beef. Если оставить поле пустым, отобразятся все рецепты.<br>
+            </blockquote>
+
+            <div class="meal-search-box">
+                <input type="text" class="search-control" placeholder="Enter ingredient" id="search-input">
+                <button type="submit" class="search-btn btn-food" id="search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="meal-result">
+            <h2 class="title">Результаты поиска:</h2>
+            <div id="meal">
+            </div>
+        </div>
+
+
+        <div class="meal-details">
+            <button type="button" class="btn recipe-close-btn" id="recipe-close-btn">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <div class="meal-details-content">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/recipes.js"></script>
+</body>
+</html>
