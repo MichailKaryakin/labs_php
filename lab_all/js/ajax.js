@@ -11,8 +11,8 @@ let config = {
     options: {}
 };
 
-function initSecidSelect() {
-    let secid = document.getElementById("secid_select");
+function initSecIdSelect() {
+    let secId = document.getElementById("secId_select");
     $.ajax({
         url: "https://sedelkin.ru/api/security_list",
         method: "get",
@@ -22,10 +22,10 @@ function initSecidSelect() {
             let optionArray = [];
             let arr = data.data;
             arr.forEach(function (item) {
-                optionArray.push(createOptionElem(item.title, item.secid));
+                optionArray.push(createOptionElem(item.title, item.secId));
             })
             optionArray.forEach(function (item) {
-                secid.append(item);
+                secId.append(item);
             });
         }
     });
@@ -60,7 +60,7 @@ function clearChartData() {
 function updateChart(chartName, dataObject) {
     let dataCharts = [];
     dataObject.forEach(function (item) {
-        labels.push(item.datetime);
+        labels.push(item.dateTime);
         dataCharts.push(parseFloat(item.close));
     });
     data.labels = labels;
@@ -78,9 +78,9 @@ function updateChart(chartName, dataObject) {
 
 function getData(event) {
     event.preventDefault();
-    let secid_index = document.getElementById('secid_select').options.selectedIndex;
+    let secId_index = document.getElementById('secId_select').options.selectedIndex;
     let interval_index = document.getElementById('interval_select').options.selectedIndex;
-    let secid_value = document.getElementById('secid_select').options[secid_index].value;
+    let secId_value = document.getElementById('secId_select').options[secId_index].value;
     let interval_value = document.getElementById('interval_select').options[interval_index].value;
     let limits_value = document.getElementById('limit_value').value;
     let date_value = document.getElementById('date_value').value;
@@ -92,14 +92,14 @@ function getData(event) {
             app_key: "lpDRhW4f%5Bj|i8mB~BjlCD#Ve6wAi",
             interval: interval_value,
             limits: limits_value,
-            secid: secid_value,
+            secId: secId_value,
             start: date_value,
             finish: ""
         },
         success: function (data) {
             if (data.status === "OK") {
                 clearChartData();
-                updateChart(data.secid, data.data);
+                updateChart(data.secId, data.data);
             } else {
                 console.log();
             }
@@ -111,7 +111,7 @@ function createOptionElem(title, value) {
     return new Option(title, value);
 }
 
-initSecidSelect();
+initSecIdSelect();
 
 initIntervalSelect();
 
